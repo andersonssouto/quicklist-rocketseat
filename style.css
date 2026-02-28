@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --background-primary: #f4f5fb;
+  --background-secondary: #ffffff;
+
+  --color-brand: #ca3884;
+  --color-brand-hover: #a52c6b;
+  --color-danger: #c93847;
+
+  --content-primary: #080b12;
+  --content-secondary: #374151;
+  --content-tertiary: #9ca3af;
+
+  --always-white: #ffffff;
+  --border-primary: #d1d5db;
+  --border-hover: #b9c2d0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-primary);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1000px;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.headQuickList {
+  margin-top: 60px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--color-brand);
+  transition: 0.2s ease;
+}
+
+.backButton:hover {
+  color: var(--color-brand-hover);
+}
+
+.titleQuickList {
+  font-size: 44px;
+  margin-bottom: 40px;
+  color: var(--content-primary);
+}
+
+.addNewItem {
+  margin-bottom: 20px;
+}
+
+.addNewItemContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.addNewItemContent input {
+  width: 100%;
+  padding: 15px;
+  flex: 1;
+
+  font-size: 16px;
+  outline: none;
+  border: 2px solid var(--border-primary);
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.addNewItemContent input:hover {
+  border: 2px solid var(--border-hover);
+}
+
+.addNewItemContent input:focus {
+  border: 2px solid var(--color-brand);
+}
+
+.addNewItemContent input:focus::placeholder {
+  color: var(--content-primary);
+}
+
+.addNewItemContent input::placeholder {
+  color: var(--content-tertiary);
+  letter-spacing: 0.5px;
+}
+
+.addNewItemContent button {
+  padding: 15px 40px;
+  border-radius: 12px;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: var(--always-white);
+  background-color: var(--color-brand);
+  transition: 0.2s ease;
+}
+
+.addNewItemContent button:hover {
+  background-color: var(--color-brand-hover);
+}
+
+.checkListContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 16px;
+  margin-bottom: 14px;
+
+  border-radius: 12px;
+  background-color: var(--background-secondary);
+}
+
+.checkListItem {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.checkListItem input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid var(--border-primary);
+  border-radius: 6px;
+
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+
+  transition: 0.2s ease;
+}
+
+.checkListItem input[type="checkbox"]:hover {
+  border-color: var(--border-hover);
+}
+
+.checkListItem input[type="checkbox"]:checked {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.checkListItem input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+
+  left: 5px;
+  top: 2px;
+
+  width: 4px;
+  height: 8px;
+
+  border: 2px solid var(--always-white);
+  border-top: none;
+  border-left: none;
+
+  transform: rotate(45deg);
+}
+
+.checkListItem input:hover {
+  border-color: var(--border-hover);
+}
+
+.checkListItem input[type="checkbox"] .checkListItem label {
+  color: var(--content-primary);
+}
+
+.checkListContainer a {
+  font-size: 20px;
+  color: var(--content-tertiary);
+  transition: all 0.2s;
+}
+
+.checkListContainer a:hover {
+  color: var(--color-danger);
+}
+
+.removalAlert {
+  margin-top: 60px;
+  color: var(--always-white);
+}
+
+.hidden {
+  display: none;
+}
+
+.removalAlertContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px;
+  border-radius: 12px;
+  background-color: var(--color-danger);
+}
+
+.removalAlertIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.removalAlertContent .closeIcon a {
+  font-size: 20px;
+  color: var(--always-white);
+}
+
+/****************************
+  MEDIA QUERIES
+/****************************/
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .titleQuickList {
+    font-size: 28px;
+  }
+
+  .addNewItemContent {
+    flex-direction: column;
+  }
+}

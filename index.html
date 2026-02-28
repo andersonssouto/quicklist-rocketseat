@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quicklist - RocketSeat</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <img src="./assets/logo/logo.png" alt="Logo Quicklist" />
+      </header>
+
+      <section class="headQuickList">
+        <div class="container">
+          <a href="#" class="backButton">
+            <i class="hgi hgi-stroke hgi-arrow-left-02"></i>
+            Voltar
+          </a>
+
+          <h1 class="titleQuickList">Compras da semana</h1>
+        </div>
+      </section>
+
+      <section class="addNewItem">
+        <div class="container">
+          <div class="addNewItemContent">
+            <input
+              type="text"
+              id="itemInput"
+              placeholder="Adicione um novo item"
+            />
+
+            <button type="submit" id="addItemBtn">Adicionar item</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="checkList">
+        <div class="container" id="itemList">
+          <div class="checkListContainer">
+            <div class="checkListItem">
+              <input type="checkbox" id="item-1" name="item-1" />
+              <label for="item-1">Pão de Forma</label>
+            </div>
+
+            <a href="#">
+              <i class="hgi hgi-stroke hgi-delete-02"></i>
+            </a>
+          </div>
+
+          <div class="checkListContainer">
+            <div class="checkListItem">
+              <input type="checkbox" id="item-2" name="item-2" />
+              <label for="item-2">Café Preto</label>
+            </div>
+
+            <a href="#">
+              <i class="hgi hgi-stroke hgi-delete-02"></i>
+            </a>
+          </div>
+
+          <div class="checkListContainer">
+            <div class="checkListItem">
+              <input type="checkbox" id="item-3" name="item-3" />
+              <label for="item-3">Suco de Laranja</label>
+            </div>
+
+            <a href="#">
+              <i class="hgi hgi-stroke hgi-delete-02"></i>
+            </a>
+          </div>
+
+          <div class="checkListContainer">
+            <div class="checkListItem">
+              <input type="checkbox" id="item-4" name="item-4" />
+              <label for="item-4">Bolacha</label>
+            </div>
+
+            <a href="#">
+              <i class="hgi hgi-stroke hgi-delete-02"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="removalAlert hidden">
+        <div class="container">
+          <div class="removalAlertContent">
+            <div class="removalAlertIcon">
+              <img
+                src="./assets/icons/warning-circle-filled.png"
+                alt="Ícone de Alerta"
+              />
+              <span>O item foi removido da lista</span>
+            </div>
+
+            <div class="closeIcon">
+              <a href="#">
+                <i class="hgi hgi-stroke hgi-cancel-01"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
